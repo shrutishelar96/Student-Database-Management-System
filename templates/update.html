@@ -1,0 +1,60 @@
+<!--update.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask SQL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-+h4Z4Nf1X/Wz12G+RbpvO7GyScJKeuOVslWlfnC08vV7mZtCJXV8QmOaKvOUlT7y65l+3bdfhTfrg3Zn4we+Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/update.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{student[1]}}'s Update</h1>
+        <form action="/update/{{student[0]}}" method="post">
+            <div class="form-group">
+                <label for="fname">Student Name:</label>
+                <input type="text" class="form-control" name="fname" value="{{student[1]}}">
+            </div>
+            <div class="form-group">
+                <label for="lname">Student Surname:</label>
+                <input type="text" class="form-control" name="lname" value="{{student[2]}}">
+            </div>
+            <div class="form-group">
+                <label for="rollno">Student Roll No:</label>
+                <input type="number" class="form-control" name="rollno" value="{{student[3]}}">
+            </div>
+            <div class="form-group">
+                <label for="email">Student Email:</label>
+                <input type="text" class="form-control" name="email" value="{{student[4]}}">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+    
+    </html>
+
+ 
+  <!-- <body>
+    <h1>{{student[1]}}'s Update</h1>
+    <form action=" /update/{{student[0] }}" method="post">
+        <label for="fname">Student Name: </label><br>
+        <input type="text" name="fname" value="{{student[1]}}"> 
+        <br><br>
+        <label for="lname">Student Surname: </label><br>
+        <input type="text" name="lname" value="{{student[2]}}">  
+        <br><br>
+        <label for="rollno">Student Roll No: </label><br>
+        <input type="number" name="rollno" value="{{student[3]}}"> 
+        <br><br>
+        <label for="email">Student Email</label><br>
+        <input type="text" name="email" value="{{student[4]}}">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
+-->
